@@ -71,6 +71,11 @@ public class CrearUsuario extends javax.swing.JDialog {
         });
 
         Cancelar.setText("Cancelar");
+        Cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -185,6 +190,13 @@ public class CrearUsuario extends javax.swing.JDialog {
 
 
     }//GEN-LAST:event_GuardarActionPerformed
+
+    private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
+        this.setVisible(false);
+        Interfaz interfaz = new Interfaz();
+        new Usuarios (interfaz,true).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_CancelarActionPerformed
 
     /**
      * @param args the command line arguments
